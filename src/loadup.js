@@ -56,9 +56,10 @@ function createHeader() {
 
     headerWrapper.appendChild(logo);
     headerWrapper.appendChild(navigation);
+    return headerWrapper;
 }
 
-export function loadInitialStructure() {
+export default function loadInitialStructure() {
     const body = document.querySelector('body');
     const header = createHeader();
     const contentWrapper = createContentWrapper();
