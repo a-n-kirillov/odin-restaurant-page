@@ -17,11 +17,16 @@ function createNavigationWrapper() {
     return navigationWrapper;
 }
 
+export function makeTabActive(tab) {
+    tab.classList.add('active');
+}
+
 function createNavigationList() {
     const navigationList = document.createElement('ul');
 
     const homeButton = document.createElement('li');
     homeButton.textContent = 'Home';
+    makeTabActive(homeButton);
 
     const menuButton = document.createElement('li');
     menuButton.textContent = 'Menu';
